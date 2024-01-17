@@ -12,5 +12,6 @@ Learned a bit about BeautifulSoup and Request module of python. Also learned the
 
 # Notes
 
-I learned the hard way that free hosting sites usually limit the communication between sites, hence, unless I pay for this app. It would never be ported to the 
-web - which is likely be never.
+I learned the hard way (ie: already wrote the code) that free hosting sites usually limit the communication between 
+sites, hence, unless I pay for this app. It would never be ported to the 
+web - which is likely never.
