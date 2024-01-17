@@ -14,12 +14,6 @@ class ETLab:
         self.username = username
         self.password = password
         self.session = requests.Session()
-        self.session.headers.update(
-            {
-                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \
-                (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"
-            }
-        )
         self.login()
 
     def login(self):
