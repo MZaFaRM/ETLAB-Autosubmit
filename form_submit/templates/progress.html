@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Completing the forms</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+        function updateOutput() {
+            $.ajax({
+                url: "/etlab-status/",
+                success: function(data) {
+                    var formattedOutput = data.output.replace(/\n/g, '<br>');
+                    $("#output").html(formattedOutput);
+                    if (data.done) {
+                        clearInterval(intervalId); 
+                    }
+                }
+            });
+        }
+        var intervalId = setInterval(updateOutput, 1000);
+    </script>
+  </body>
+</html>
